@@ -1,0 +1,15 @@
+while true
+
+    r1 = randi(5); 
+    r2 = randi(5);
+    
+    sum = r1 + r2; 
+    
+    if sum <= 8; 
+        break; 
+    end
+end
+
+r = sum-1;
+
+fprintf("Número aleatorio entre 1 y 7: %d \n", r );
