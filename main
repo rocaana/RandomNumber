@@ -1,15 +1,18 @@
-while true
 
-    r1 = randi(5); 
-    r2 = randi(5);
-    
-    sum = r1 + r2; 
-    
-    if sum <= 8; 
-        break; 
+    r= zeros(1, 10000);
+
+    for i = 1:10000
+        
+        r1 = randi(5);
+        r2 = randi(5);
+        r3 = randi(5);
+        r4 = randi(5);
+        r5 = randi(5);
+
+        r(i) = mod((r1+r2+r3+r4+r5)*5,7) +1 ;
+        
     end
-end
-
-r = sum-1;
-
-fprintf("Número aleatorio entre 1 y 7: %d \n", r );
+      
+    histogram(r);
+    xlabel('Valor');
+    ylabel('Frecuencia');
